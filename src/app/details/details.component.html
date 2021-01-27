@@ -1,12 +1,30 @@
 <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title>Details</mat-card-title>
-      <mat-card-subtitle>User Details</mat-card-subtitle>
+      <mat-card-title>TODO</mat-card-title>
+      <mat-card-subtitle>Todo List</mat-card-subtitle>
+      <input matInput placeholder="Todo" [(ngModel)]="todo" name="todo">
+      <button mat-raised-button color="primary" (click)="Add()" aria-label="Example icon button with a delete icon">
+        Add
+      </button>
     </mat-card-header>
     <mat-card-content>
-        <mat-list role="list">
-            <mat-list-item *ngFor="let i of details" role="listitem">{{i}}</mat-list-item>
-        </mat-list>
+        <!-- <mat-list role="list">
+            <mat-list-item *ngFor="let i of details" role="listitem">{{i.todo}}
+              <button mat-icon-button color="primary" (click)="Remove(i)" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-list-item>
+            
+        </mat-list> -->
+        <mat-selection-list #shoes [multiple]="false">
+          <mat-list-option *ngFor="let i of details" [value]="i.todo">
+            {{i.todo}}
+            <button mat-icon-button color="primary" (click)="Remove(i)" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-list-option>
+        </mat-selection-list>
+
     </mat-card-content>
 
   </mat-card>

@@ -17,12 +17,14 @@ import { HttpConfigInterceptor } from './interceptor/httpConfig.interceptor';
 import { DetailsComponent } from './details/details.component';
 import { MatListModule} from "@angular/material/list";
 import { ReactiveFormsModule } from "@angular/forms";
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DetailsComponent
+    DetailsComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
