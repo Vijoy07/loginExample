@@ -1,0 +1,34 @@
+
+<mat-card>
+    <mat-card-header style="width: 100%;text-align: center;">
+      <!-- <mat-card-title>Log In</mat-card-title> -->
+      <!-- <mat-card-subtitle>Login Details</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="Register()">
+          <h2>Register</h2>
+
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Email" [(ngModel)]="userName" formControlName="username" name="Email"  required>
+              <mat-error>
+                Please provide a valid email address
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input">
+              <input matInput type="password" placeholder="Password" [(ngModel)]="password" formControlName="password" name="Password" required>
+              <mat-error>
+                Please provide a valid password
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input">
+              <input matInput type="password" placeholder="Confirm Password" [(ngModel)]="password1" formControlName="password1" name="Password1" required>
+              <mat-error>
+                Confirm password
+              </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Register</button>
+        </form>
+    </mat-card-content>
+  </mat-card>

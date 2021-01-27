@@ -1,3 +1,9 @@
 .example-card {
     margin: 15px;
 }
+
+mat-list-item button,
+mat-list-option button {
+    position: absolute;
+    right: 0px;
+}
